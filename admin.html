@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Sports Hub — Owner Admin Console</title>
+  <meta name="description" content="Owner dashboard to manage unlimited sports gear listings, change prices anytime, and manage WhatsApp orders.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body>
+
+  <!-- 1. Secure Login Overlay Screen -->
+  <div class="admin-login-wrapper" id="loginWrapper">
+    <div class="login-card">
+      <div class="login-logo">
+        <div class="login-logo-icon">⚡</div>
+        <div class="login-logo-text">
+          <h2>APEX SPORTS</h2>
+          <p>OWNER MANAGEMENT PORTAL</p>
+        </div>
+      </div>
+
+      <form class="login-form" id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginUser">Admin Username</label>
+          <input type="text" id="loginUser" class="form-control" placeholder="Enter username" required autocomplete="username">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="loginPin">Security Password / PIN</label>
+          <input type="password" id="loginPin" class="form-control" placeholder="Enter PIN" required autocomplete="current-password">
+        </div>
+
+        <div id="loginError" style="color: #ef4444; font-size: 0.8rem; font-weight: 700; display: none;"></div>
+
+        <div class="login-hint">
+          <span>Demo Credentials: <strong>admin</strong> / <strong>sports123</strong></span>
+          <button type="button" class="quick-fill-btn" id="quickFillBtn">Auto-Fill</button>
+        </div>
+
+        <button type="submit" class="btn btn-volt" style="padding: 12px; font-size: 0.95rem; margin-top: 6px;">
+          <span>Unlock Admin Panel</span>
+        </button>
+
+        <a href="index.html" style="text-align: center; color: var(--text-secondary); text-decoration: none; font-size: 0.82rem; margin-top: 8px;">
+          ← Return to Public Storefront
+        </a>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. Admin Header -->
+  <header class="admin-header">
+    <div class="admin-header-inner">
+      <div class="admin-brand">
+        <div style="width: 36px; height: 36px; background: var(--volt); color: #000; font-weight: 900; display: flex; align-items: center; justify-content: center; border-radius: 6px; font-family: 'Barlow Condensed'; font-size: 1.3rem;">⚡</div>
+        <div>
+          <span style="font-family: 'Barlow Condensed'; font-size: 1.4rem; font-weight: 800; letter-spacing: 0.5px;" id="adminStoreTitle">APEX SPORTS — OWNER CONSOLE</span>
+          <span class="admin-badge">UNLIMITED LISTINGS</span>
+        </div>
+      </div>
+
+      <div class="admin-actions">
+        <!-- View Live Storefront -->
+        <a href="index.html" target="_blank" class="btn btn-outline btn-sm" title="Open storefront in new tab">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+          <span>View Live Shop</span>
+        </a>
+
+        <!-- Store & WhatsApp Settings -->
+        <button type="button" class="btn btn-outline btn-sm" id="btnOpenSettingsModal" title="Update WhatsApp Number and Store Info">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          <span>WhatsApp & Settings</span>
+        </button>
+
+        <!-- Logout -->
+        <button type="button" class="btn btn-outline btn-sm" id="adminLogoutBtn" title="Logout from Admin">
+          <span>Logout</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Main Admin Workspace -->
+  <main class="admin-container">
+    
+    <!-- KPI Dashboard Metrics -->
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-card-title">Total Products Listed</span>
+        <span class="kpi-value" id="kpiTotalProducts">10</span>
+        <span class="kpi-sub">Unlimited Listing Capacity Active</span>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-card-title">In-Stock Gear</span>
+        <span class="kpi-value" style="color: #4ade80;" id="kpiInStock">9</span>
+        <span class="kpi-sub">Ready for 1-Click WhatsApp Orders</span>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-card-title">Out of Stock</span>
+        <span class="kpi-value" style="color: #f87171;" id="kpiOutOfStock">1</span>
+        <span class="kpi-sub">Flagged on Storefront</span>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-card-title">Catalog Valuation</span>
+        <span class="kpi-value" id="kpiValuation">₹32,490</span>
+        <span class="kpi-sub">Estimated Total Inventory Value</span>
+      </div>
+
+      <div class="kpi-card">
+        <span class="kpi-card-title">WhatsApp Orders Hotline</span>
+        <span class="kpi-value" style="font-size: 1.4rem; color: var(--wa-green);" id="kpiWhatsApp">+919876543210</span>
+        <span class="kpi-sub">Receiving 1-Click Order Enquiries</span>
+      </div>
+    </section>
+
+    <!-- Toolbar Strip -->
+    <div class="admin-toolbar">
+      <div class="toolbar-search">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="adminSearch" class="form-control" placeholder="Search gear title, sport, SKU...">
+      </div>
+
+      <div class="toolbar-buttons">
+        <select id="adminCatFilter" class="form-control" style="width: auto; cursor: pointer;">
+          <option value="All">All Sports Categories</option>
+        </select>
+
+        <!-- ADD PRODUCT BUTTON -->
+        <button type="button" class="btn btn-volt" id="btnOpenAddModal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+          <span>+ Add New Sports Gear (Unlimited)</span>
+        </button>
+
+        <!-- Export Backup -->
+        <button type="button" class="btn btn-outline" id="btnExportData" title="Export complete backup as JSON">
+          <span>📥 Backup Catalog</span>
+        </button>
+
+        <!-- Import Backup -->
+        <button type="button" class="btn btn-outline" id="btnImportData" title="Import products from JSON">
+          <span>📤 Import</span>
+        </button>
+        <input type="file" id="importFileInput" accept=".json" style="display: none;">
+
+        <!-- Reset Defaults -->
+        <button type="button" class="btn btn-outline" id="btnResetDefaults" title="Restore factory products">
+          <span>🔄 Reset</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Products Table -->
+    <div class="table-card">
+      <div class="table-responsive">
+        <table class="products-table">
+          <thead>
+            <tr>
+              <th>Thumb</th>
+              <th>Product Name & Specs</th>
+              <th>Category</th>
+              <th>Price (Change Anytime)</th>
+              <th>Stock Status</th>
+              <th>WhatsApp Link</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="productsTableBody">
+            <!-- Rendered dynamically by admin.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- 4. Add / Edit Product Modal -->
+  <div class="admin-modal-overlay" id="productModal">
+    <div class="admin-modal-dialog">
+      <div class="modal-header-row">
+        <h3 class="modal-title" id="productModalTitle">Add New Sports Gear (Unlimited Listing)</h3>
+        <button type="button" class="modal-close-icon" id="modalCloseBtn">✕</button>
+      </div>
+
+      <form id="productForm">
+        <div class="form-grid-2">
+          <div class="form-group">
+            <label class="form-label" for="prodName">Gear / Product Name *</label>
+            <input type="text" id="prodName" class="form-control" placeholder="e.g. SS Vintage English Willow Bat" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="prodSku">SKU / Item Code</label>
+            <input type="text" id="prodSku" class="form-control" placeholder="e.g. CRK-BAT-01">
+          </div>
+        </div>
+
+        <div class="form-grid-2" style="margin-top: 14px;">
+          <div class="form-group">
+            <label class="form-label" for="prodCategory">Category *</label>
+            <select id="prodCategory" class="form-control" required>
+              <option value="Cricket">Cricket</option>
+              <option value="Football">Football</option>
+              <option value="Badminton">Badminton</option>
+              <option value="Gym & Fitness">Gym & Fitness</option>
+              <option value="Footwear">Footwear / Shoes</option>
+              <option value="Sportswear">Sportswear / Apparel</option>
+              <option value="Accessories">Sports Accessories</option>
+              <option value="Other Sports">Other Sports</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="prodSport">Sport Type</label>
+            <input type="text" id="prodSport" class="form-control" placeholder="e.g. Cricket, Soccer, Tennis">
+          </div>
+        </div>
+
+        <div class="form-grid-2" style="margin-top: 14px;">
+          <div class="form-group">
+            <label class="form-label" for="prodPrice">Selling Price (₹) *</label>
+            <input type="number" id="prodPrice" class="form-control" placeholder="e.g. 6499" required min="0" step="1">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="prodOriginalPrice">Original MRP (₹) (For Discount Display)</label>
+            <input type="number" id="prodOriginalPrice" class="form-control" placeholder="e.g. 8999" min="0" step="1">
+          </div>
+        </div>
+
+        <div class="form-grid-2" style="margin-top: 14px;">
+          <div class="form-group">
+            <label class="form-label" for="prodStock">Stock Availability</label>
+            <select id="prodStock" class="form-control">
+              <option value="In Stock">🟢 In Stock (Ready for WhatsApp dispatch)</option>
+              <option value="Low Stock">🟡 Low Stock (Hurry notice)</option>
+              <option value="Out of Stock">🔴 Out of Stock</option>
+              <option value="Pre-Order">🔵 Pre-Order (Custom build)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="prodBadge">Promotional Badge</label>
+            <input type="text" id="prodBadge" class="form-control" placeholder="e.g. PRO CHOICE, HOT SELLER, NEW DROP">
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 14px;">
+          <label class="form-label" for="prodSizes">Available Sizes / Weights / Variants (Comma-separated)</label>
+          <input type="text" id="prodSizes" class="form-control" placeholder="e.g. Full Size (SH), Size 6, Size 5 OR UK 7, UK 8, UK 9 OR 10kg, 15kg">
+          <small style="color: var(--text-muted); font-size: 0.74rem;">Customers can pick their size on the website and it will automatically be sent in the 1-Click WhatsApp message.</small>
+        </div>
+
+        <div class="form-group" style="margin-top: 14px;">
+          <label class="form-label" for="prodHighlights">Product Highlights / Specs (One per line)</label>
+          <textarea id="prodHighlights" class="form-control" rows="3" placeholder="Grade 1 English Willow&#10;Weight: 1180g Balanced Bow&#10;Huge 40mm Edges&#10;Free Padded Cover"></textarea>
+        </div>
+
+        <div class="form-group" style="margin-top: 14px;">
+          <label class="form-label" for="prodDesc">Full Gear Description</label>
+          <textarea id="prodDesc" class="form-control" rows="3" placeholder="Detailed craftsmanship and material specifications..."></textarea>
+        </div>
+
+        <!-- UNLIMITED PHOTOS & MEDIA MANAGER -->
+        <div class="form-group" style="margin-top: 16px;">
+          <label class="form-label">Gear Photos & Gallery (NO LIMIT — Add Unlimited Photos)</label>
+          <div class="media-manager-box">
+            <div class="media-upload-strip">
+              <input type="url" id="mediaUrlInput" class="form-control" placeholder="Paste Image URL..." style="flex: 1;">
+              <button type="button" class="btn btn-outline" id="btnAddMediaUrl">Add URL Photo</button>
+              
+              <label class="btn btn-volt" style="cursor: pointer;">
+                <span>📁 Upload From Device</span>
+                <input type="file" id="mediaFileInput" accept="image/*" multiple style="display: none;">
+              </label>
+            </div>
+            <small style="color: var(--text-muted); font-size: 0.74rem;">
+              You can paste online image links or select photos directly from your phone/computer. Files are automatically formatted and preserved!
+            </small>
+
+            <!-- Photo Thumbnails Grid -->
+            <div class="photo-preview-grid" id="photoPreviewGrid">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 14px; display: flex; align-items: center; gap: 8px;">
+          <input type="checkbox" id="prodFeatured" style="accent-color: var(--volt); width: 16px; height: 16px;">
+          <label for="prodFeatured" style="font-size: 0.85rem; font-weight: 700; cursor: pointer;">Feature on Homepage Showcase</label>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--admin-border);">
+          <button type="button" class="btn btn-outline" id="modalCancelBtn">Cancel</button>
+          <button type="submit" class="btn btn-volt" style="padding: 11px 24px;">
+            <span>Save to Sports Catalog</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 5. Store & WhatsApp Settings Modal -->
+  <div class="admin-modal-overlay" id="settingsModal">
+    <div class="admin-modal-dialog" style="max-width: 650px;">
+      <div class="modal-header-row">
+        <h3 class="modal-title">Store & WhatsApp Hotline Settings</h3>
+        <button type="button" class="modal-close-icon" id="settingsCloseBtn">✕</button>
+      </div>
+
+      <form id="settingsForm">
+        <div class="settings-group">
+          <h4 style="color: var(--volt); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 10px;">WhatsApp 1-Click Orders Routing</h4>
+          <div class="form-group">
+            <label class="form-label" for="setWhatsapp">WhatsApp Number (For Receiving Orders) *</label>
+            <input type="text" id="setWhatsapp" class="form-control" placeholder="e.g. 919876543210 (with country code, digits only)" required>
+            <small style="color: var(--text-muted); font-size: 0.74rem;">All customer 1-Click WhatsApp orders will be sent to this WhatsApp number.</small>
+          </div>
+          <div class="form-group" style="margin-top: 10px;">
+            <label class="form-label" for="setPhone">Display Phone Number (Shown to Customers)</label>
+            <input type="text" id="setPhone" class="form-control" placeholder="e.g. +91 98765 43210">
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h4 style="color: var(--cyan); font-size: 0.88rem; text-transform: uppercase; margin-bottom: 10px;">Store Profile</h4>
+          <div class="form-group">
+            <label class="form-label" for="setStoreName">Shop / Business Name</label>
+            <input type="text" id="setStoreName" class="form-control" placeholder="Apex Sports Hub">
+          </div>
+          <div class="form-group" style="margin-top: 10px;">
+            <label class="form-label" for="setAddress">Physical Address / Landmark</label>
+            <input type="text" id="setAddress" class="form-control" placeholder="Stadium Main Road, Opp. Central Sports Complex">
+          </div>
+          <div class="form-grid-2" style="margin-top: 10px;">
+            <div class="form-group">
+              <label class="form-label" for="setCity">City & State</label>
+              <input type="text" id="setCity" class="form-control" placeholder="Mumbai, Maharashtra - 400050">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="setTimings">Operating Timings</label>
+              <input type="text" id="setTimings" class="form-control" placeholder="09:30 AM – 09:30 PM (All 7 Days)">
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h4 style="color: #fff; font-size: 0.88rem; text-transform: uppercase; margin-bottom: 10px;">Announcement Marquee Banner</h4>
+          <div class="form-group">
+            <label class="form-label" for="setAnnouncement">Top Banner Ticker Text</label>
+            <input type="text" id="setAnnouncement" class="form-control" placeholder="🔥 BIG MATCH SEASON SALE: Flat 20% to 40% OFF!">
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h4 style="color: #f59e0b; font-size: 0.88rem; text-transform: uppercase; margin-bottom: 10px;">Admin Security</h4>
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="setAdminUser">Admin Username</label>
+              <input type="text" id="setAdminUser" class="form-control" placeholder="admin">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="setAdminPin">Admin Password / PIN</label>
+              <input type="text" id="setAdminPin" class="form-control" placeholder="sports123">
+            </div>
+          </div>
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 20px;">
+          <button type="button" class="btn btn-outline" id="settingsCancelBtn">Cancel</button>
+          <button type="submit" class="btn btn-volt" style="padding: 10px 22px;">
+            <span>Save Settings</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Shared Scripts -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

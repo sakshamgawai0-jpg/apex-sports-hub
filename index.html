@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apex Sports Hub — Pro Athletic Gear, Equipment & 1-Click WhatsApp Shop</title>
+  <meta name="description" content="Shop premium sports gear, cricket bats, footballs, badminton racquets, gym dumbbells and athletic apparel with 1-click WhatsApp ordering. Unlimited listings and pro athletic consultation.">
+  <meta name="keywords" content="sports shop, cricket bat, football, badminton racquet, gym weights, athletic wear, sports equipment, buy on whatsapp">
+
+  <!-- Favicon Icon (Sports Ball Emoji / SVG) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts & Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar / Running Marquee -->
+  <div class="announcement-bar">
+    <div class="marquee-track" id="marqueeBanner">
+      <!-- Injected via JavaScript from store settings -->
+      <div class="marquee-item"><span>⚡</span> <span>BIG MATCH SEASON SALE: Flat 20% to 40% OFF on Cricket, Football & Gym Gear!</span></div>
+      <div class="marquee-item"><span>📞</span> <span>WhatsApp Instant Orders: <strong>+91 98765 43210</strong></span></div>
+      <div class="marquee-item"><span class="highlight">1-CLICK WHATSAPP ORDERING ACTIVE</span></div>
+    </div>
+  </div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" id="brandLogo">
+        <div class="brand-icon-box">⚡</div>
+        <div class="brand-text">
+          <span class="brand-title">APEX SPORTS</span>
+          <span class="brand-subtitle">PRO ATHLETIC HUB</span>
+        </div>
+      </a>
+
+      <!-- Search Bar -->
+      <div class="header-search">
+        <span class="search-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </span>
+        <input type="text" id="searchInput" placeholder="Search cricket bats, footballs, dumbbells, shoes..." autocomplete="off">
+      </div>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Direct 1-Click WhatsApp Hotline -->
+        <a href="#" target="_blank" rel="noopener noreferrer" class="wa-direct-pill js-wa-direct" title="Chat on WhatsApp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.971.554 1.77.851 2.781.851 3.18 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.768-5.768zm0-2.172c4.418 0 8 3.582 8 8 0 1.55-.44 3.003-1.205 4.24l1.205 4.76-4.887-1.282c-1.192.686-2.576 1.082-4.113 1.082-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/>
+          </svg>
+          <span>Chat on WhatsApp</span>
+        </a>
+
+        <!-- Cart Trigger Button -->
+        <button class="cart-btn" id="cartBtn" aria-label="Shopping Bag">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-count" id="cartBadgeCount" style="display: none;">0</span>
+        </button>
+
+        <!-- Owner Admin Link -->
+        <a href="admin.html" class="admin-nav-link" title="Open Owner Admin Panel to list items anytime">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Admin Panel</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>⚡</span> <span>100% AUTHENTIC PRO SPORTS EQUIPMENT</span>
+        </div>
+        <h1 class="hero-title">
+          GEAR UP FOR VICTORY. <span class="glow">ORDER IN 1-CLICK</span> ON WHATSAPP.
+        </h1>
+        <p class="hero-desc">
+          Premium grade cricket willow, match footballs, graphite badminton racquets, and heavy-duty gym setups. Tap any product for direct WhatsApp pricing, stock confirmation and express dispatch.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#catalog" class="btn btn-volt btn-lg">
+            <span>Explore All Sports Gear</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-wa btn-lg js-wa-direct">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.971.554 1.77.851 2.781.851 3.18 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.768-5.768zm0-2.172c4.418 0 8 3.582 8 8 0 1.55-.44 3.003-1.205 4.24l1.205 4.76-4.887-1.282c-1.192.686-2.576 1.082-4.113 1.082-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/>
+            </svg>
+            <span>Ask Sports Specialist</span>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Original Gear</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">&lt; 5 Min</span>
+            <span class="stat-label">WhatsApp Response</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">Same-Day</span>
+            <span class="stat-label">Store Pickup</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Showcase Card -->
+      <div class="hero-card">
+        <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=1000&q=80" alt="SS Vintage Finisher Willow Cricket Bat" class="hero-card-img">
+        <div class="hero-card-header">
+          <div>
+            <span class="badge-tag pro" style="margin-bottom: 6px; display: inline-block;">FEATURED PRO DROP</span>
+            <div class="hero-card-title">SS Vintage Finisher Grade 1 Bat</div>
+          </div>
+          <div class="hero-card-price">₹6,499</div>
+        </div>
+        <div class="hero-card-pills">
+          <span class="pill-feature">🏏 English Willow</span>
+          <span class="pill-feature">⚖️ 1180g Balanced Bow</span>
+          <span class="pill-feature">🛡️ 40mm Edges</span>
+        </div>
+        <a href="https://wa.me/919876543210?text=Hello%20Apex%20Sports!%20I%20want%20to%20order%20the%20SS%20Vintage%20Finisher%20Cricket%20Bat%20(%E2%82%B96,499).%20Please%20share%20availability%20details!" target="_blank" rel="noopener noreferrer" class="btn-wa-oneclick js-wa-direct">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.971.554 1.77.851 2.781.851 3.18 0 5.767-2.587 5.768-5.768 0-3.18-2.587-5.768-5.768-5.768zm0-2.172c4.418 0 8 3.582 8 8 0 1.55-.44 3.003-1.205 4.24l1.205 4.76-4.887-1.282c-1.192.686-2.576 1.082-4.113 1.082-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/>
+          </svg>
+          <span>Order This on WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Sports Category Chips -->
+  <section class="category-section" id="catalog">
+    <div class="container">
+      <div class="category-track" id="categoryChips">
+        <!-- Rendered dynamically by app.js -->
+        <button class="cat-chip active">🔥 All Equipment</button>
+        <button class="cat-chip">Cricket</button>
+        <button class="cat-chip">Football</button>
+        <button class="cat-chip">Badminton</button>
+        <button class="cat-chip">Gym & Fitness</button>
+        <button class="cat-chip">Footwear</button>
+        <button class="cat-chip">Sportswear</button>
+        <button class="cat-chip">Accessories</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Sort Toolbar -->
+  <section class="toolbar-section">
+    <div class="container">
+      <div class="toolbar-card">
+        <div class="toolbar-left">
+          <span class="toolbar-count" id="productsCount">Showing <strong>10</strong> Gear Items</span>
+          
+          <label class="toggle-filter">
+            <input type="checkbox" id="stockToggle">
+            <span>In Stock Only</span>
+          </label>
+        </div>
+
+        <div class="toolbar-right">
+          <label for="sortSelect" style="font-size: 0.84rem; color: var(--text-muted);">Sort By:</label>
+          <select id="sortSelect" class="select-filter">
+            <option value="featured">Featured / Bestsellers</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dynamic Products Grid -->
+  <section class="products-section">
+    <div class="container">
+      <div class="products-grid" id="productsGrid">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Badges & Guarantee -->
+  <section class="features-section">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-title">100% Genuine Sports Gear</div>
+            <div class="feature-desc">Authentic brands, Grade-1 English willow, official FIFA match balls.</div>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="1" y="3" width="15" height="13"></rect>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+              <circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-title">Same-Day Dispatch & Pickup</div>
+            <div class="feature-desc">Collect directly from our store or get express doorstep delivery.</div>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.971.554 1.77.851 2.781.851 3.18 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.768-5.768zm0-2.172c4.418 0 8 3.582 8 8 0 1.55-.44 3.003-1.205 4.24l1.205 4.76-4.887-1.282c-1.192.686-2.576 1.082-4.113 1.082-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-title">1-Click WhatsApp Ordering</div>
+            <div class="feature-desc">Skip complex checkouts. Order directly on WhatsApp with your selected sizes.</div>
+          </div>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-box">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+          </div>
+          <div>
+            <div class="feature-title">Owner Admin Dashboard</div>
+            <div class="feature-desc">Store owners can list unlimited sports gear and adjust prices anytime.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Store Address & Direct WhatsApp Help -->
+  <section class="store-contact-banner">
+    <div class="container">
+      <div class="store-contact-box">
+        <div>
+          <span class="badge-tag pro" style="margin-bottom: 8px; display: inline-block;">VISIT OUR STORE OR ORDER ONLINE</span>
+          <h2 class="store-info-title">NEED CUSTOM GEAR OR BULK TEAM KITS?</h2>
+          <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 0.95rem;">
+            Whether you need custom team jersey printing, tournament cricket bats, or full gym setup quotation, our sports specialists are ready to help you directly on WhatsApp.
+          </p>
+          <div id="storeAddress" style="font-size: 0.88rem; line-height: 1.6; color: var(--text-white); margin-bottom: 18px;">
+            <!-- Injected by app.js -->
+            <strong>Stadium Main Road, Opp. Central Sports Complex</strong><br>
+            Mumbai, Maharashtra - 400050<br>
+            <span class="text-volt">Timings: 09:30 AM – 09:30 PM (All 7 Days)</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-wa-oneclick js-wa-direct" style="font-size: 1.05rem; padding: 16px;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.971.554 1.77.851 2.781.851 3.18 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.768-5.768-5.768zm0-2.172c4.418 0 8 3.582 8 8 0 1.55-.44 3.003-1.205 4.24l1.205 4.76-4.887-1.282c-1.192.686-2.576 1.082-4.113 1.082-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/>
+            </svg>
+            <span>Message on WhatsApp Now</span>
+          </a>
+
+          <a href="admin.html" class="btn btn-outline" style="padding: 13px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span>Open Admin Panel (List Things)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; margin-bottom: 30px;">
+        <div>
+          <div class="brand-logo" style="margin-bottom: 12px;">
+            <div class="brand-icon-box" style="width: 34px; height: 34px; font-size: 1.1rem;">⚡</div>
+            <div class="brand-text">
+              <span class="brand-title" style="font-size: 1.3rem;">APEX SPORTS</span>
+              <span class="brand-subtitle" style="font-size: 0.6rem;">PRO EQUIPMENT</span>
+            </div>
+          </div>
+          <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.5;">
+            India's favorite sports hub for tournament grade cricket gear, match footballs, carbon racquets, and pro fitness gym hardware.
+          </p>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 12px; font-weight: 800;">Featured Sports</h4>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.82rem;">
+            <li><a href="#catalog" style="color: var(--text-muted); text-decoration: none;">🏏 Cricket Bats & Leather Balls</a></li>
+            <li><a href="#catalog" style="color: var(--text-muted); text-decoration: none;">⚽ Footballs, Cleats & Gloves</a></li>
+            <li><a href="#catalog" style="color: var(--text-muted); text-decoration: none;">🏸 Badminton Racquets & Shuttles</a></li>
+            <li><a href="#catalog" style="color: var(--text-muted); text-decoration: none;">🏋️ Hex Dumbbells & Benches</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 12px; font-weight: 800;">WhatsApp Hotline</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 10px;">
+            Click below for direct chat with our equipment managers for sizing, bat knocking, string tension or instant delivery:
+          </p>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="wa-direct-pill js-wa-direct">
+            <span>Direct WhatsApp: </span>
+            <strong id="footerPhone">+91 98765 43210</strong>
+          </a>
+        </div>
+
+        <div>
+          <h4 style="color: #fff; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 12px; font-weight: 800;">Shop Management</h4>
+          <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 12px;">
+            Owner can add items anytime, update prices inline, and manage stock with zero coding.
+          </p>
+          <a href="admin.html" class="btn btn-volt btn-sm">
+            <span>Access Owner Admin</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Apex Sports Hub. All Rights Reserved. Built with 1-Click WhatsApp Integration.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="admin.html" style="color: var(--volt-primary); text-decoration: none; font-weight: 700;">Admin Panel Login</a>
+          <a href="#" class="js-wa-direct" style="color: var(--wa-green); text-decoration: none; font-weight: 700;">WhatsApp Direct</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-Over Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag Drawer">
+    <div class="cart-header">
+      <div class="cart-title">YOUR SPORTS BAG</div>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close Bag">✕</button>
+    </div>
+
+    <!-- Items List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Injected by app.js -->
+    </div>
+
+    <!-- Cart Footer & WhatsApp Checkout -->
+    <div class="cart-footer">
+      <div class="cart-summary-row">
+        <span>Gear Subtotal:</span>
+        <span id="cartSubtotal">₹0</span>
+      </div>
+      <div class="cart-summary-row" style="color: #4ade80;">
+        <span>Store Pickup / Delivery:</span>
+        <span>FREE / Calculated on WhatsApp</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Estimated Total:</span>
+        <span class="cart-total-price" id="cartTotal">₹0</span>
+      </div>
+
+      <!-- Customer Checkout Details -->
+      <div class="checkout-inputs">
+        <input type="text" id="customerName" class="checkout-input" placeholder="Your Name (e.g. Rahul Sharma)">
+        <input type="text" id="customerAddress" class="checkout-input" placeholder="Delivery Address / Landmark / Store Pickup Note">
+        
+        <div class="delivery-options">
+          <label class="delivery-opt-label">
+            <input type="radio" name="deliveryMode" value="Store Pickup (Ready in 30 mins)" checked>
+            <span>🏬 Store Pickup</span>
+          </label>
+          <label class="delivery-opt-label">
+            <input type="radio" name="deliveryMode" value="Doorstep Delivery">
+            <span>🚚 Home Delivery</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Proceed to WhatsApp Checkout Button -->
+      <button class="btn-wa-oneclick" id="btnCheckoutWhatsApp" style="font-size: 1rem; padding: 14px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.971.554 1.77.851 2.781.851 3.18 0 5.767-2.587 5.768-5.768 0-3.18-2.587-5.768-5.768-5.768zm0-2.172c4.418 0 8 3.582 8 8 0 1.55-.44 3.003-1.205 4.24l1.205 4.76-4.887-1.282c-1.192.686-2.576 1.082-4.113 1.082-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/>
+        </svg>
+        <span>Proceed to WhatsApp Checkout</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+      <div id="modalBody">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <a href="#" target="_blank" rel="noopener noreferrer" class="floating-wa-btn js-wa-direct" aria-label="Direct WhatsApp Contact">
+    <div class="floating-wa-pulse"></div>
+    <span class="floating-wa-tooltip">⚡ Order & Inquire on WhatsApp</span>
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.971.554 1.77.851 2.781.851 3.18 0 5.767-2.587 5.768-5.768 0-3.18-2.587-5.768-5.768-5.768zm0-2.172c4.418 0 8 3.582 8 8 0 1.55-.44 3.003-1.205 4.24l1.205 4.76-4.887-1.282c-1.192.686-2.576 1.082-4.113 1.082-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/>
+    </svg>
+  </a>
+
+  <!-- Mobile Sticky Bottom Navigation -->
+  <nav class="mobile-bottom-bar">
+    <a href="#catalog" class="mobile-nav-item active">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+      </svg>
+      <span>Catalog</span>
+    </a>
+
+    <button type="button" class="mobile-nav-item" id="mobNavCart">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span>Bag <span id="mobCartCount" class="badge-tag pro" style="display:none; padding: 1px 4px; font-size: 0.65rem;">0</span></span>
+    </button>
+
+    <a href="#" target="_blank" rel="noopener noreferrer" class="mobile-nav-item wa-nav js-wa-direct">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.599 2.679-.702c.971.554 1.77.851 2.781.851 3.18 0 5.767-2.587 5.768-5.768 0-3.18-2.587-5.768-5.768-5.768zm0-2.172c4.418 0 8 3.582 8 8 0 1.55-.44 3.003-1.205 4.24l1.205 4.76-4.887-1.282c-1.192.686-2.576 1.082-4.113 1.082-4.418 0-8-3.582-8-8 0-4.418 3.582-8 8-8z"/>
+      </svg>
+      <span>WhatsApp</span>
+    </a>
+
+    <a href="admin.html" class="mobile-nav-item">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+      <span>Admin</span>
+    </a>
+  </nav>
+
+  <!-- Storage and Application Logic Scripts -->
+  <script src="assets/js/storage.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
